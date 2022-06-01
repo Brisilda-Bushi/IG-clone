@@ -1,21 +1,41 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Pressable, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Pressable, TouchableOpacity, Alert } from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import Validator from 'email-validator';
+import {firebase, db} from '../../firebase';
 
-const LoginForm = ({navigation}) => {
+const LoginForm = ({ navigation }) => {
   const LoginFormSchema = Yup.object().shape({
     email: Yup.string().email().required('An email is required'),
     password: Yup.string().required().min(6, 'Your password has to have at least 6 characters'),
   });
+
+  const onLogin = async (email, password) => {
+    try {
+      await firebase.auth().signInWithEmailAndPassword(email, password);
+      console.log('🔥 Firebase Login Successful ✅', email, password);
+    } catch (error) {
+      Alert.alert('🤷‍♀️ Oops ... 🤷‍♂️', error.message + '\n\n ... What would you like to do next? 👀', [
+        {
+          text: 'OK',
+          onPress: () => console.log('OK'),
+          style: 'cancel',
+        },
+        {
+          text: 'Sign Up',
+          onPress: () => navigation.push('SignupScreen'),
+        },
+      ]);
+    }
+  };
 
   return (
     <View style={styles.wrapper}>
       <Formik
         initialValues={{ email: '', password: '' }}
         onSubmit={(values) => {
-          console.log(values);
+          onLogin(values.email, values.password);
         }}
         validationSchema={LoginFormSchema}
         validateOnMount={true}
@@ -74,7 +94,7 @@ const LoginForm = ({navigation}) => {
 
             <View style={styles.signupContainer}>
               <Text>Don't have an account?</Text>
-              <TouchableOpacity onPress={() => navigation.push("SignupScreen")}>
+              <TouchableOpacity onPress={() => navigation.push('SignupScreen')}>
                 <Text style={{ color: '#6BB0F5' }}> Sign Up</Text>
               </TouchableOpacity>
             </View>
