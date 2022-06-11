@@ -17,7 +17,7 @@ const Stories = () => {
             style={styles.story}
             />
             <Text style={{ color: "white", marginLeft: 10}}>{
-              story.user.length > 11 ? story.user.slice(0, 10).toLowerCase() + "..." : story.user.toLowerCase()
+              story.user.length > 11 ? story.user.slice(0, 6).toLowerCase() + "..." : story.user.toLowerCase()
             }</Text>
           </TouchableOpacity>
         ))}
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     borderRadius: 50,
-    marginLeft: 10,
+    marginLeft: 18,
     borderWidth: 2,
     borderColor: "#ff8501",
   },
