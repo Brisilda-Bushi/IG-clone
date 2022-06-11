@@ -1,4 +1,4 @@
-# My Universal React Project
+# React Native Project - IG Clone 
 
 <p>
   <!-- iOS -->
@@ -17,28 +17,36 @@
 
 ## 🚀 How to use
 
-- Install packages with `yarn` or `npm install`.
-  - If you have native iOS code run `npx pod-install`
+- Install packages with `yarn`.
 - Run `yarn start` to start the bundler.
 - Open the project in a React runtime to try it:
   - iOS: [Client iOS](https://itunes.apple.com/app/apple-store/id982107779)
   - Android: [Client Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample)
-  - Web: Any web browser
 
-## Adding Native Code
+- You can sign up by your own or use these credentials
+  - email: fake@email.com & password: 123456
+</br>
 
-This project can be run from a web browser or the Expo client app. You may find that you want to add more native code later on. You can do this by ejecting the project and rebuilding it yourself.
+## ✨ Functionalities of the app
 
-- Run `yarn eject` to create the native projects.
-- You can still run your project in the web browser or Expo client, you just won't be able to access any new native modules you add.
+- Register an account
+- Log in an existing account
+- Create public posts
+- Like others posts
+## 📱 Screenshots of the final project
+### Sign Up Screen
+<img src="./screenshots/Capture5.PNG" />
 
-## Publishing
+### Sign In Screens
+<img src="./screenshots/Capture4.PNG" />
+<img src="./screenshots/Capture6.PNG" />
 
-- Deploy the native app to the App store and Play store using this guide: [Deployment](https://docs.expo.dev/distribution/app-stores/).
-- Deploy the website using this guide: [Web deployment](https://docs.expo.dev/distribution/publishing-websites/).
+### Home Page Screens
+<img src="./screenshots/Capture1.PNG" />
+<img src="./screenshots/Capture.PNG" />
+<img src="./screenshots/Capture2.PNG" />
 
-## 📝 Notes
+### Add a Post Screens
+<img src="./screenshots/Capture3.PNG" />
 
-- Learn more about [Universal React](https://docs.expo.dev/).
-- See what API and components are [available in the React runtimes](https://docs.expo.dev/versions/latest/).
-- Find out more about developing apps and websites: [Guides](https://docs.expo.dev/guides/).
+
