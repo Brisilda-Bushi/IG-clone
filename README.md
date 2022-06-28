@@ -25,6 +25,7 @@
 
 - You can sign up by your own or use these credentials
   - email: fake@email.com & password: 123456
+  - Firebase free version has been used in this project, if there are any issues logging in or creating an account is due to limited resources.
 </br>
 
 ## ✨ Functionalities of the app
@@ -33,6 +34,16 @@
 - Log in an existing account
 - Create public posts
 - Like others posts
+
+## 📱 Check Live this project via Expo Go
+- Install Expo Go from playstore <br> <a href="https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample">
+    <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
+  </a>
+- Install Expo Go from Apple store <br> <a href="https://itunes.apple.com/app/apple-store/id982107779">
+    <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
+  </a>
+- Open Expo Go and scan the QR Code from the Screenshot below or folow [this link](exp://exp.host/@brisilda-bushi/ig-clone-brisilda?release-channel=default)
+<img src="./screenshots/InstagramQRcode.PNG" />
 ## 📱 Screenshots of the final project
 ### Sign Up Screen
 <img src="./screenshots/Capture5.PNG" />
